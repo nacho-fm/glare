@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: image
+  version: '1.0'
+  description: REST API to manage images for glare detection
+  contact:
+    email: chris@nacho.fm
+tags:
+  - name: detect_glare
+servers:
+  - url: 0.0.0.0:5000
+paths:
+  /detect_glare:
+    parameters: []
+    post:
+      summary: Detect glare from image metadata
+      operationId: post-detect_glare
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  glare:
+                    type: boolean
+                    description: Indicates if there is likely glare in the given image metadata.
+                required:
+                  - glare
+      description: Run a function to determine if given image metadata indicates possibility of direct glare in the associated image.
+      security: []
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                lat:
+                  type: number
+                  format: float
+                  minimum: 0
+                  maximum: 90
+                lon:
+                  type: number
+                  format: float
+                  minimum: -180
+                  maximum: 180
+                epoch:
+                  type: number
+                orientation:
+                  type: number
+                  format: float
+                  minimum: -180
+                  maximum: 180
+              required:
+                - lat
+                - lon
+                - epoch
+                - orientation
+        description: An instance of an ImageMetadata object.
+components:
+  schemas:
+    ImageMetadata:
+      description: Image metatadata concerning position and orientation of the image
+      type: object
+      properties:
+        lat:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 90
+        lon:
+          type: number
+          format: float
+          minimum: -180
+          maximum: 180
+        epoch:
+          type: number
+        orientation:
+          type: number
+          format: float
+          minimum: -180
+          maximum: 180
+      required:
+        - lat
+        - lon
+        - epoch
+        - orientation
+  securitySchemes: {}
