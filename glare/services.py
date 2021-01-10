@@ -3,8 +3,8 @@ from pvlib import solarposition as sp
 import numpy as np
 
 
-MAX_ELEVATION = 45
 MAX_AZIMUTH_DIFFERENCE = 30
+MAX_ELEVATION = 45
 
 
 def detect_glare(image_metadata: ImageMetadata) -> bool:
@@ -25,5 +25,5 @@ def detect_glare(image_metadata: ImageMetadata) -> bool:
     solar_position = sp.spa_python(image_metadata.epoch, image_metadata.latitude,
                                    image_metadata.longitude).to_numpy()[0]
 
-    return not (solar_position[3] >= MAX_ELEVATION or np.abs(
-        solar_position[4] - image_metadata.orientation) >= MAX_AZIMUTH_DIFFERENCE)
+    return np.abs(
+        solar_position[4] - image_metadata.orientation) < MAX_AZIMUTH_DIFFERENCE and solar_position[3] < MAX_ELEVATION

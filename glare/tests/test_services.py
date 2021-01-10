@@ -1,7 +1,7 @@
 import logging
-from models.image_metadata import ImageMetadata
+from glare.models.image_metadata import ImageMetadata
 from numpy import random
-import services
+import glare.services as services
 import sys
 import unittest
 
@@ -22,10 +22,9 @@ def simulate_detect_glare(iterations: int = 10000) -> int:
             logging.info('longitude: ' + str(test_im.longitude))
             logging.info('epoch: ' + str(test_im.epoch))
             logging.info('orientation: ' + str(test_im.orientation))
-            logging.info(str(services.detect_glare(test_im)))
             true_counter += 1
+            logging.info("Number of glares detected: " + str(true_counter))
 
-    logging.info("Number of glares detected: " + str(true_counter))
     return true_counter
 
 

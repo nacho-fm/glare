@@ -3,7 +3,7 @@ from connexion.resolver import RestyResolver
 from flask_cors import CORS
 
 app = connexion.FlaskApp(__name__, specification_dir='openapi')
-app.add_api('detect_glare.yaml', resolver=RestyResolver('routes'))
+app.add_api('detect_glare.yaml', resolver=RestyResolver('glare.routes'))
 
 # add CORS support
 # https://connexion.readthedocs.io/en/latest/cookbook.html#cors-support
