@@ -5,8 +5,6 @@ info:
   description: REST API to manage images for glare detection
   contact:
     email: chris@nacho.fm
-tags:
-  - name: detect_glare
 servers:
   - url: http://0.0.0.0:5000
 paths:
@@ -25,7 +23,7 @@ paths:
         description: An instance of an ImageMetadata object.
       responses:
         '200':
-          description: OK
+          description: OK - "True" string if glare is possible, "False" string otherwise.
           content:
             application/json:
               schema:
@@ -33,10 +31,12 @@ paths:
                 type: object
                 properties:
                   glare:
-                    type: boolean
+                    type: string # This really should be bool, but the project description explicitly has it as a string
                     description: Indicates if there is likely glare in the given image metadata.
                 required:
                   - glare
+        '400':
+          description: Bad Request, typically from invalid request body JSON
 components:
   schemas:
     ImageMetadata:

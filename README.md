@@ -54,5 +54,10 @@ The OpenAPI spec provided by Swagger allows for a portable way of defining an AP
 
 The openapi/detect_glare.yaml file is the system of record for this API.
 
+## Using the API (Swagger UI)
+Connexion provides a Swagger UI instance out of the box (note that in the production deployment, this functionality should be removed).
+
+After running the glare server as documented above, you should be able to access and try out the API by going to "http://localhost:5000/ui/" in your browser.
+
 ## Calculating Solar Position
-Uses the NREL SPA algorithm (https://midcdmz.nrel.gov/spa/) to calculate solar position.
+This service uses the NREL SPA algorithm (https://midcdmz.nrel.gov/spa/) to calculate solar position.
