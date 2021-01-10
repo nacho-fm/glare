@@ -1,3 +1,5 @@
+from pandas import DatetimeIndex
+
 from glare.models.image_metadata import ImageMetadata
 from pvlib import solarposition as sp
 import numpy as np
@@ -22,7 +24,7 @@ def detect_glare(image_metadata: ImageMetadata) -> bool:
     :return: True if glare is possible, False if not
     """
     # Uses NREL SPA algorithm (https://midcdmz.nrel.gov/spa/)
-    solar_position = sp.spa_python(image_metadata.epoch, image_metadata.latitude,
+    solar_position = sp.spa_python(DatetimeIndex(np.array([image_metadata.epoch])), image_metadata.latitude,
                                    image_metadata.longitude).to_numpy()[0]
 
     return np.abs(
