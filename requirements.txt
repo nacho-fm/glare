@@ -2,4 +2,5 @@ Flask==1.1.2
 Flask-Cors==3.0.10
 connexion[swagger-ui]==2.7.0
 numpy==1.19.5
+pandas==1.2.0
 pvlib==0.8.1
