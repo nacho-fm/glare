@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-11T05:04:21.113Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="lsE5v-porBK0syxjrYW9" version="14.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-11T05:04:50.883Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="TkQhmC4aFsW6qGqe87is" version="14.1.9" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="839" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -49,10 +49,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Ya1_WFq1DWij1B-eGoRc-15" value="Glare Detection Service" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="300" y="460" width="345" height="200" as="geometry" />
+          <mxGeometry x="320" y="460" width="345" height="200" as="geometry" />
         </mxCell>
         <mxCell id="E-BLmExjyVE-HBWsHxf6-1" value="Image Metadata Collection Service Batch Consumer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="300" y="520" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="E-BLmExjyVE-HBWsHxf6-2" value="Image Metadata Collection Service Batch Consumer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="310" y="530" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="E-BLmExjyVE-HBWsHxf6-3" value="Image Metadata Collection Service Batch Consumer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="540" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="E-BLmExjyVE-HBWsHxf6-4" value="Image Metadata Collection Service Batch Consumer" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="550" width="90" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
