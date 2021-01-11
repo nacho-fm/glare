@@ -1,11 +1,13 @@
-<mxfile host="app.diagrams.net" modified="2021-01-11T00:46:47.209Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="XuzV4ndYPbnYnzlvQ-Ia" version="14.1.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-11T02:54:22.817Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="gKaunEUVfv6NRpFqUU-F" version="14.1.9" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="946" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="871" dy="590" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="LEbugSoTyeR6-p7tngCZ-1" value="ImageMetadata&#xa;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="70" y="30" width="160" height="130" as="geometry" />
+          <mxGeometry x="70" y="30" width="160" height="130" as="geometry">
+            <mxRectangle x="70" y="30" width="120" height="26" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="LEbugSoTyeR6-p7tngCZ-2" value="+ latitude: Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -18,6 +20,104 @@
         </mxCell>
         <mxCell id="LEbugSoTyeR6-p7tngCZ-10" value="+ orientation: Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-1">
           <mxGeometry y="104" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-11" value="Glare Detection Service&lt;br&gt;" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="270" width="660" height="406" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-12" value="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;detect_glare&#xa;REST API" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="120" y="321" width="110" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-14" value="image_metadata, solar_position" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;exitX=1.018;exitY=0.585;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LEbugSoTyeR6-p7tngCZ-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="240" y="512" as="sourcePoint" />
+            <mxPoint x="390" y="512" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-15" value="SolarPosition" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.1;exitY=0.719;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.018;entryY=0.108;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="LEbugSoTyeR6-p7tngCZ-12">
+          <mxGeometry x="-0.0592" y="23" relative="1" as="geometry">
+            <mxPoint x="241.50000000000023" y="356.08900000000006" as="targetPoint" />
+            <mxPoint x="390" y="357.02" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-24" value="detect_glare POST" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="30" width="160" height="208" as="geometry">
+            <mxRectangle x="70" y="30" width="120" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-25" value="Request&#xa;{&#xa;tes&#xa;}" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-24">
+          <mxGeometry y="26" width="160" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-29" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-24">
+          <mxGeometry y="110" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-30" value="Response" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-24">
+          <mxGeometry y="118" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-32" value="" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;direction=east;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="321" width="400" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-34" value="Solar Position&#xa;Service Impl" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="430" y="375" width="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-36" value="SunPosition" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="254" y="30" width="160" height="78" as="geometry">
+            <mxRectangle x="70" y="30" width="120" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-37" value="+ altitude: Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-36">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-38" value="+ azimuth: Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="LEbugSoTyeR6-p7tngCZ-36">
+          <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-42" value="" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;direction=east;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="390" y="497" width="400" height="149" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-43" value="Glare Detection&#xa;Service Impl" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="430" y="551.5" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-44" value="epoch, latitude, longitude" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;exitX=1.036;exitY=0.049;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LEbugSoTyeR6-p7tngCZ-12">
+          <mxGeometry x="0.0667" y="7" relative="1" as="geometry">
+            <mxPoint x="240" y="336.9999999999998" as="sourcePoint" />
+            <mxPoint x="390" y="336.9999999999998" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-45" value="boolean" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0;exitDx=0;exitDy=35;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LEbugSoTyeR6-p7tngCZ-42">
+          <mxGeometry x="-0.0504" y="25" relative="1" as="geometry">
+            <mxPoint x="231" y="530" as="targetPoint" />
+            <mxPoint x="400" y="425.02" as="sourcePoint" />
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-50" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;i&gt;glare.services.calculate_solar_position&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ epoch: Float&lt;br&gt;+ latitude: Float&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ longitude: Float&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ return: SolarPosition&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="328.5" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-51" value="&lt;p style=&quot;margin: 0px ; margin-top: 4px ; text-align: center&quot;&gt;&lt;i&gt;glare.services.detect_glare&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ image_metadata: ImageMetadata&lt;br&gt;+ solar_position: SolarPosition&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px ; margin-left: 4px&quot;&gt;+ return: Boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="501.5" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-55" value="Object" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="410" y="420" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-56" value="/detect_glare&lt;br&gt;POST" style="html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="147" y="326" width="73" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-57" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="20" y="312" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-58" value="Request" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.533;exitY=0.4;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LEbugSoTyeR6-p7tngCZ-57" target="LEbugSoTyeR6-p7tngCZ-12">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="50" y="340" as="sourcePoint" />
+            <mxPoint x="130" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LEbugSoTyeR6-p7tngCZ-59" value="Response" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0;exitY=0;exitDx=0;exitDy=35;exitPerimeter=0;entryX=0.633;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="LEbugSoTyeR6-p7tngCZ-12" target="LEbugSoTyeR6-p7tngCZ-57">
+          <mxGeometry x="-0.0053" y="24" width="80" relative="1" as="geometry">
+            <mxPoint x="45.99000000000001" y="346" as="sourcePoint" />
+            <mxPoint x="130" y="346" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
